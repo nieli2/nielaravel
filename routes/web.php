@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('angular', function () {
+	$data = DB::table('tasks')->get();
+	return json_encode($data);
+    //return view('angular');
+});
